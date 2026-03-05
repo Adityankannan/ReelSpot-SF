@@ -1,0 +1,215 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`YearFilter snapshots > matches snapshot after a decade is selected 1`] = `
+<div>
+  <div
+    style="position: relative;"
+  >
+    <button
+      style="background: rgba(231, 76, 60, 0.15); border: 1px solid rgba(231, 76, 60, 0.5); border-radius: 10px; backdrop-filter: blur(12px); display: flex; align-items: center; gap: 6px; padding: 10px 14px; cursor: pointer; color: #e74c3c; font-size: 13px; font-weight: 600; font-family: Montserrat, sans-serif; white-space: nowrap;"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-calendar"
+        fill="none"
+        height="14"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8 2v4"
+        />
+        <path
+          d="M16 2v4"
+        />
+        <rect
+          height="18"
+          rx="2"
+          width="18"
+          x="3"
+          y="4"
+        />
+        <path
+          d="M3 10h18"
+        />
+      </svg>
+      1960s
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-x"
+        fill="none"
+        height="13"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="13"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18 6 6 18"
+        />
+        <path
+          d="m6 6 12 12"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`YearFilter snapshots > matches snapshot in closed (default) state 1`] = `
+<div>
+  <div
+    style="position: relative;"
+  >
+    <button
+      style="background: rgba(19, 19, 28, 0.92); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; backdrop-filter: blur(12px); display: flex; align-items: center; gap: 6px; padding: 10px 14px; cursor: pointer; color: #9898b3; font-size: 13px; font-weight: 600; font-family: Montserrat, sans-serif; white-space: nowrap;"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-calendar"
+        fill="none"
+        height="14"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8 2v4"
+        />
+        <path
+          d="M16 2v4"
+        />
+        <rect
+          height="18"
+          rx="2"
+          width="18"
+          x="3"
+          y="4"
+        />
+        <path
+          d="M3 10h18"
+        />
+      </svg>
+      Era
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-chevron-down"
+        fill="none"
+        height="13"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="13"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m6 9 6 6 6-6"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`YearFilter snapshots > matches snapshot with dropdown open 1`] = `
+<div>
+  <div
+    style="position: relative;"
+  >
+    <button
+      style="background: rgba(19, 19, 28, 0.92); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; backdrop-filter: blur(12px); display: flex; align-items: center; gap: 6px; padding: 10px 14px; cursor: pointer; color: #9898b3; font-size: 13px; font-weight: 600; font-family: Montserrat, sans-serif; white-space: nowrap;"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-calendar"
+        fill="none"
+        height="14"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8 2v4"
+        />
+        <path
+          d="M16 2v4"
+        />
+        <rect
+          height="18"
+          rx="2"
+          width="18"
+          x="3"
+          y="4"
+        />
+        <path
+          d="M3 10h18"
+        />
+      </svg>
+      Era
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-chevron-down"
+        fill="none"
+        height="13"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="13"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m6 9 6 6 6-6"
+        />
+      </svg>
+    </button>
+    <div
+      style="position: absolute; top: calc(100% + 6px); right: 0px; background: rgba(19, 19, 28, 0.98); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; overflow: hidden; z-index: 1000; box-shadow: 0 8px 32px rgba(0,0,0,0.6); backdrop-filter: blur(12px); min-width: 120px;"
+    >
+      <button
+        style="width: 100%; background: none none; padding: 9px 16px; text-align: left; cursor: pointer; font-size: 13px; font-weight: 500; color: #f0f0f0; font-family: Montserrat, sans-serif; border-style: none none solid; border-color: none none rgba(255, 255, 255, 0.05); border-image: initial; border-top-width: initial; border-right-width: initial; border-bottom-width: 1px; border-left-width: initial;"
+      >
+        1950
+        s
+      </button>
+      <button
+        style="width: 100%; background: none none; padding: 9px 16px; text-align: left; cursor: pointer; font-size: 13px; font-weight: 500; color: #f0f0f0; font-family: Montserrat, sans-serif; border-style: none none solid; border-color: none none rgba(255, 255, 255, 0.05); border-image: initial; border-top-width: initial; border-right-width: initial; border-bottom-width: 1px; border-left-width: initial;"
+      >
+        1960
+        s
+      </button>
+      <button
+        style="width: 100%; background: none none; padding: 9px 16px; text-align: left; cursor: pointer; font-size: 13px; font-weight: 500; color: #f0f0f0; font-family: Montserrat, sans-serif; border-style: none none solid; border-color: none none rgba(255, 255, 255, 0.05); border-image: initial; border-top-width: initial; border-right-width: initial; border-bottom-width: 1px; border-left-width: initial;"
+      >
+        1990
+        s
+      </button>
+      <button
+        style="width: 100%; background: none none; padding: 9px 16px; text-align: left; cursor: pointer; font-size: 13px; font-weight: 500; color: #f0f0f0; font-family: Montserrat, sans-serif; border-style: none none solid; border-color: none none rgba(255, 255, 255, 0.05); border-image: initial; border-top-width: initial; border-right-width: initial; border-bottom-width: 1px; border-left-width: initial;"
+      >
+        2000
+        s
+      </button>
+    </div>
+  </div>
+</div>
+`;
