@@ -275,10 +275,10 @@ cp .env.example .env
 
 `.env` is listed in `.gitignore` and is never committed. `.env.example` (committed) documents every variable:
 
-| Variable              | Description                              | Default / example                                                          |
-| --------------------- | ---------------------------------------- | -------------------------------------------------------------------------- |
-| `VITE_DATASF_API_URL` | DataSF Film Locations API endpoint       | `https://data.sfgov.org/resource/yitu-d5am.json?$limit=3000&$offset=0`    |
-| `VITE_MAP_STYLE_URL`  | Map tile style JSON (CARTO Voyager CDN)  | `https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json`             |
+| Variable              | Description                             | Default / example                                                      |
+| --------------------- | --------------------------------------- | ---------------------------------------------------------------------- |
+| `VITE_DATASF_API_URL` | DataSF Film Locations API endpoint      | `https://data.sfgov.org/resource/yitu-d5am.json?$limit=3000&$offset=0` |
+| `VITE_MAP_STYLE_URL`  | Map tile style JSON (CARTO Voyager CDN) | `https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json`         |
 
 Both URLs are public and require no authentication keys. Overriding them is useful when running a local API proxy or a self-hosted map tile server.
 

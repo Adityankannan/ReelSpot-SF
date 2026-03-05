@@ -16,3 +16,6 @@ coverage/
 .DS_Store
 *.swp
 .vscode/settings.json
+
+# Local dev convenience scripts (may contain absolute paths)
+start.sh
