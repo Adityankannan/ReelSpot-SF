@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/ReelSpot-SF/",
   test: {
     environment: "happy-dom",
     globals: true,
