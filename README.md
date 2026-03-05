@@ -14,6 +14,7 @@ ReelSpot SF is a single-page React application that plots all San Francisco film
 - [Architecture & Data Flow](#architecture--data-flow)
 - [Component Overview](#component-overview)
 - [Theming System](#theming-system)
+- [Environment Variables](#environment-variables)
 - [Getting Started](#getting-started)
 - [Available Scripts](#available-scripts)
 - [Running Tests](#running-tests)
@@ -112,6 +113,9 @@ cinemap-sf/
     │   │
     │   └── ReelSpotPin/
     │       └── ReelSpotPin.tsx        # SVG map pin component
+    │
+    ├── utils/
+    │   └── logger.ts            # Structured logger (debug/info/warn/error levels)
     │
     └── test/
         └── setup.ts             # Vitest global setup (@testing-library/jest-dom)
@@ -228,6 +232,10 @@ Small pill displaying total movie count and total location pin count.
 
 Full-screen overlay shown while data is fetching or when a fetch error occurs.
 
+### `logger.ts` (`src/utils/`)
+
+Lightweight structured logger with four levels: `debug`, `info`, `warn`, `error`. Debug messages are suppressed in production builds (`import.meta.env.PROD`). An optional context object is forwarded as a third argument to the console method. To integrate a remote logging service (Sentry, Datadog, etc.), replace the console calls inside `logger.ts` without touching any call-sites.
+
 ---
 
 ## Theming System
@@ -254,6 +262,28 @@ No component file contains a hardcoded `style={{ ... }}` literal — everything 
 
 ---
 
+## Environment Variables
+
+All runtime configuration is read from environment variables prefixed with `VITE_` so that Vite inlines them at build time.
+
+### Setup
+
+```bash
+cp .env.example .env
+# Edit .env if you need to point at a different API endpoint
+```
+
+`.env` is listed in `.gitignore` and is never committed. `.env.example` (committed) documents every variable:
+
+| Variable              | Description                              | Default / example                                                          |
+| --------------------- | ---------------------------------------- | -------------------------------------------------------------------------- |
+| `VITE_DATASF_API_URL` | DataSF Film Locations API endpoint       | `https://data.sfgov.org/resource/yitu-d5am.json?$limit=3000&$offset=0`    |
+| `VITE_MAP_STYLE_URL`  | Map tile style JSON (CARTO Voyager CDN)  | `https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json`             |
+
+Both URLs are public and require no authentication keys. Overriding them is useful when running a local API proxy or a self-hosted map tile server.
+
+---
+
 ## Getting Started
 
 ### Prerequisites
@@ -267,6 +297,7 @@ No component file contains a hardcoded `style={{ ... }}` literal — everything 
 git clone <repo-url>
 cd cinemap-sf
 npm install
+cp .env.example .env   # configure environment variables
 ```
 
 ### Run development server
@@ -328,7 +359,8 @@ npm run test:run
 | `src/components/Sidebar/CreditsBlock.test.tsx`        | 16      | 3         | Director/cast/production rows, omission when absent, snapshot                                                              |
 | `src/components/Sidebar/LocationItem.test.tsx`        | 10      | 2         | Location description, fun-fact presence/absence, snapshot                                                                  |
 | `src/components/Sidebar/LocationsSection.test.tsx`    | 11      | 3         | Count header, item rendering, empty list, snapshot                                                                         |
-| **Total**                                             | **169** | **25**    |                                                                                                                            |
+| `src/utils/logger.test.ts`                            | 7       | —         | Each log level, correct console method, prefix format, context forwarding, method isolation                                |
+| **Total**                                             | **176** | **25**    |                                                                                                                            |
 
 ---
 
@@ -403,5 +435,5 @@ npm run preview
 ## Environment Notes
 
 - **maplibre-gl must be v3.x** — the project is pinned to `maplibre-gl@3.6.2`. v4/v5 introduced breaking API changes incompatible with `react-map-gl@7`.
-- **No `.env` file required** — the DataSF API is public and requires no key.
+- **`.env` is required at runtime** — copy `.env.example` to `.env` before starting the dev server. The variables are public (no secrets), so the defaults from `.env.example` work out of the box.
 - **Map tiles** are served from `https://basemaps.cartocdn.com` (CARTO Voyager style) — an internet connection is required at runtime.
