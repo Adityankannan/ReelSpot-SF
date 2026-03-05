@@ -1,0 +1,32 @@
+{
+  "brand": {
+    "appName": "ReelSpot SF",
+    "appSubtitle": "San Francisco Film Locations"
+  },
+  "controls": {
+    "randomButton": "Random",
+    "searchPlaceholder": "Search movies, directors, actors...",
+    "yearFilterDefault": "Era"
+  },
+  "stats": {
+    "movies": "movies",
+    "locationsMapped": "locations mapped"
+  },
+  "loading": {
+    "subtitle": "Loading filming locations\u2026",
+    "errorTitle": "Failed to load data"
+  },
+  "panel": {
+    "directorLabel": "DIRECTOR",
+    "castLabel": "CAST",
+    "productionLabel": "PRODUCTION",
+    "filmingLocationsPrefix": "FILMING LOCATIONS"
+  },
+  "map": {
+    "popupFooter": "See full details in the panel \u2192",
+    "counterFilming": "filming",
+    "counterLocationSingular": "location",
+    "counterLocationPlural": "locations",
+    "counterSuffix": "on map"
+  }
+}
