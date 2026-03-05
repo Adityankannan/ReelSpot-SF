@@ -1,0 +1,41 @@
+{
+  "name": "cinemap-sf",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "coverage": "vitest run --coverage"
+  },
+  "keywords": ["react", "typescript", "maps", "san-francisco", "film"],
+  "author": "Adityan Kannan",
+  "license": "ISC",
+  "description": "Interactive map of San Francisco film-shoot locations powered by the DataSF API",
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "happy-dom": "^20.8.3",
+    "jsdom": "^28.1.0",
+    "typescript": "^5.9.3",
+    "vite": "^4.5.14",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "framer-motion": "^12.35.0",
+    "fuse.js": "^7.1.0",
+    "lucide-react": "^0.577.0",
+    "maplibre-gl": "^3.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-map-gl": "^7.1.9"
+  },
+  "type": "module"
+}
