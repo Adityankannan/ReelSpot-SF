@@ -33,7 +33,6 @@ import {
 
 const SF_CENTER = { longitude: -122.4194, latitude: 37.7749, zoom: 13 };
 const MAP_STYLE =
-  (import.meta.env.VITE_MAP_STYLE_URL as string | undefined) ??
   "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json";
 
 interface LocationPinProps {

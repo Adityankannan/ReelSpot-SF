@@ -2,27 +2,21 @@ import type { RawRow, Movie, MovieLocation } from "../types";
 import { logger } from "../utils/logger";
 
 /**
- * Base URL for the DataSF Film Locations endpoint.
- * Configured via the VITE_DATASF_API_URL environment variable (see .env.example).
+ * DataSF Film Locations API endpoint.
+ * Returns up to 3 000 rows of SF film-shoot data including lat/lng coordinates.
  */
-const API_URL = import.meta.env.VITE_DATASF_API_URL as string | undefined;
+const API_URL =
+  "https://data.sfgov.org/resource/yitu-d5am.json?$limit=3000&$offset=0";
 
 /**
  * Fetches film location rows from the DataSF API.
  *
  * Throws a descriptive error on:
- *  - missing environment variable configuration
  *  - non-2xx HTTP responses
  *  - empty or non-array response bodies
  *  - network-level failures (propagated from fetch)
  */
 export async function fetchFilmLocations(): Promise<RawRow[]> {
-  if (!API_URL) {
-    throw new Error(
-      "VITE_DATASF_API_URL is not configured. Copy .env.example to .env and fill in the value.",
-    );
-  }
-
   logger.info("Fetching film locations", { url: API_URL });
 
   const res = await fetch(API_URL);
