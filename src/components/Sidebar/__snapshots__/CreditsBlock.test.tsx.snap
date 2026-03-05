@@ -1,0 +1,203 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CreditsBlock — snapshots > matches snapshot with all credits populated 1`] = `
+<div>
+  <div
+    style="margin-top: 16px; padding: 12px 14px; background: rgba(255, 255, 255, 0.03); border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-direction: column; gap: 8px;"
+  >
+    <div
+      style="display: flex; gap: 8px; align-items: center;"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-user"
+        fill="none"
+        height="13"
+        stroke="#9898b3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        style="flex-shrink: 0;"
+        viewBox="0 0 24 24"
+        width="13"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
+        />
+        <circle
+          cx="12"
+          cy="7"
+          r="4"
+        />
+      </svg>
+      <div>
+        <span
+          style="font-size: 10px; color: #5a5a75; display: block;"
+        >
+          DIRECTOR
+        </span>
+        <span
+          style="font-size: 13px; color: #f0f0f0; font-weight: 600;"
+        >
+          Alfred Hitchcock
+        </span>
+      </div>
+    </div>
+    <div
+      style="display: flex; gap: 8px; align-items: flex-start;"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-user"
+        fill="none"
+        height="13"
+        stroke="#9898b3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        style="margin-top: 2px; flex-shrink: 0;"
+        viewBox="0 0 24 24"
+        width="13"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
+        />
+        <circle
+          cx="12"
+          cy="7"
+          r="4"
+        />
+      </svg>
+      <div>
+        <span
+          style="font-size: 10px; color: #5a5a75; display: block;"
+        >
+          CAST
+        </span>
+        <span
+          style="font-size: 13px; color: #f0f0f0; font-weight: 600;"
+        >
+          James Stewart, Kim Novak
+        </span>
+      </div>
+    </div>
+    <div
+      style="display: flex; gap: 8px; align-items: center;"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-film"
+        fill="none"
+        height="13"
+        stroke="#9898b3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        style="flex-shrink: 0;"
+        viewBox="0 0 24 24"
+        width="13"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          height="18"
+          rx="2"
+          width="18"
+          x="3"
+          y="3"
+        />
+        <path
+          d="M7 3v18"
+        />
+        <path
+          d="M3 7.5h4"
+        />
+        <path
+          d="M3 12h18"
+        />
+        <path
+          d="M3 16.5h4"
+        />
+        <path
+          d="M17 3v18"
+        />
+        <path
+          d="M17 7.5h4"
+        />
+        <path
+          d="M17 16.5h4"
+        />
+      </svg>
+      <div>
+        <span
+          style="font-size: 10px; color: #5a5a75; display: block;"
+        >
+          PRODUCTION
+        </span>
+        <span
+          style="font-size: 13px; color: #f0f0f0; font-weight: 600;"
+        >
+          Paramount Pictures
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CreditsBlock — snapshots > matches snapshot with cast only 1`] = `
+<div>
+  <div
+    style="margin-top: 16px; padding: 12px 14px; background: rgba(255, 255, 255, 0.03); border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-direction: column; gap: 8px;"
+  >
+    <div
+      style="display: flex; gap: 8px; align-items: flex-start;"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-user"
+        fill="none"
+        height="13"
+        stroke="#9898b3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        style="margin-top: 2px; flex-shrink: 0;"
+        viewBox="0 0 24 24"
+        width="13"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
+        />
+        <circle
+          cx="12"
+          cy="7"
+          r="4"
+        />
+      </svg>
+      <div>
+        <span
+          style="font-size: 10px; color: #5a5a75; display: block;"
+        >
+          CAST
+        </span>
+        <span
+          style="font-size: 13px; color: #f0f0f0; font-weight: 600;"
+        >
+          James Stewart, Kim Novak
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CreditsBlock — snapshots > matches snapshot with no credits 1`] = `
+<div>
+  <div
+    style="margin-top: 16px; padding: 12px 14px; background: rgba(255, 255, 255, 0.03); border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-direction: column; gap: 8px;"
+  />
+</div>
+`;
