@@ -2,6 +2,8 @@
 
 > Explore every street, alley, and landmark in San Francisco that made it onto the silver screen.
 
+🌐 **Live Demo → [https://adityankannan.github.io/ReelSpot-SF/](https://adityankannan.github.io/ReelSpot-SF/)**
+
 ReelSpot SF is a single-page React application that plots all San Francisco film-shoot locations on an interactive map, powered by the live [DataSF Film Locations API](https://data.sfgov.org/resource/yitu-d5am.json). Search by title, director, or actor; filter by decade; and click any map pin to read production details.
 
 ---
@@ -20,6 +22,7 @@ ReelSpot SF is a single-page React application that plots all San Francisco film
 - [Running Tests](#running-tests)
 - [Test Coverage](#test-coverage)
 - [Building for Production](#building-for-production)
+- [Deployment](#deployment)
 - [Environment Notes](#environment-notes)
 
 ---
@@ -320,6 +323,7 @@ Opens at **http://localhost:5173** with hot module replacement.
 | `npm test`          | Run tests in interactive watch mode        |
 | `npm run test:run`  | Run tests once and exit (CI-friendly)      |
 | `npm run coverage`  | Run tests and generate a coverage report   |
+| `npm run deploy`    | Build and publish to GitHub Pages          |
 | `npx vitest run -u` | Re-run tests and update all snapshot files |
 
 ---
@@ -437,3 +441,27 @@ npm run preview
 - **maplibre-gl must be v3.x** — the project is pinned to `maplibre-gl@3.6.2`. v4/v5 introduced breaking API changes incompatible with `react-map-gl@7`.
 - **`.env` is required at runtime** — copy `.env.example` to `.env` before starting the dev server. The variables are public (no secrets), so the defaults from `.env.example` work out of the box.
 - **Map tiles** are served from `https://basemaps.cartocdn.com` (CARTO Voyager style) — an internet connection is required at runtime.
+
+---
+
+## Deployment
+
+The app is hosted as a static site on **GitHub Pages** at:
+
+```
+https://adityankannan.github.io/ReelSpot-SF/
+```
+
+### How it works
+
+- `npm run build` compiles the app into `dist/` with all asset paths prefixed by `/ReelSpot-SF/` (set via `base` in `vite.config.ts`)
+- `npm run deploy` runs the build then pushes `dist/` to the `gh-pages` branch using the `gh-pages` package
+- GitHub Pages serves the `gh-pages` branch publicly
+
+### Redeploy after changes
+
+```bash
+npm run deploy
+```
+
+That's it — one command rebuilds and pushes the latest version live.
